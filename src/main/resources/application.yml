@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
+  redis:
+    port: ${REDIS_PORT}
+    host: ${REDIS_HOST}
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  main:
+    allow-bean-definition-overriding: true
+
+auth:
+  google:
+    clientId: ${GOOGLE_CLIENT_ID}
+    clientSecret: ${GOOGLE_CLIENT_SECRET}
+
+  kakao:
+    clientId: ${KAKAO_CLIENT_ID}
+    clientSecret: ${KAKAO_CLIENT_SECRET}
+    clientAuthenticationMethod: get
+    authorizationGrantType: authorization_code
+    redirectUri: ${KAKAO_REDIRECT_URL}
+    clientName: Kakao
+
+  facebook:
+    clientId: ${FACEBOOK_CLIENT_ID}
+    clientSecret: ${FACEBOOK_CLIENT_ID}
+
+  provider:
+    kakao:
+      authorization_uri: https://kauth.kakao.com/oauth/authorize
+      token_uri: https://kauth.kakao.com/oauth/token
+
+jwt:
+  secret_key: ${JWT_SECRET_KEY}
+  access_exp: ${JWT_ACCESS_EXP}
+  refresh_exp: ${JWT_REFRESH_EXP}
+  header: ${JWT_HEADER}
+  prefix: ${JWT_PREFIX}

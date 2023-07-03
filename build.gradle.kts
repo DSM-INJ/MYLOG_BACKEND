@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version PluginVersion.SPRING_BOOT_FRAMEWORK_VERSION
 	id("io.spring.dependency-management") version PluginVersion.SPRING_DEPENDENCY_MANAGEMENT_VERSION
+	id("org.jlleitschuh.gradle.ktlint-idea") version PluginVersion.KTLINT_VERSION
 	kotlin("jvm") version PluginVersion.JVM_VERSION
 	kotlin("plugin.spring") version PluginVersion.PLUGIN_SPRING_VERSION
 	kotlin("plugin.jpa") version PluginVersion.PLUGIN_JPA_VERSION

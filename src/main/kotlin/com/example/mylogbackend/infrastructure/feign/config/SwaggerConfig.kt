@@ -1,4 +1,4 @@
-package com.example.mylogbackend.global.config
+package com.example.mylogbackend.infrastructure.feign.config
 
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Info

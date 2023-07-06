@@ -18,11 +18,11 @@ class SecurityConfig(
 ) {
     @Bean
     @Throws(Exception::class)
-    fun filterChian(http: HttpSecurity): SecurityFilterChain {
+    fun filterChain(http: HttpSecurity): SecurityFilterChain {
         return http
-            .csrf().disable()
+            .csrf().and()
+            .cors().disable()
             .formLogin().disable()
-            .cors().and()
 
             .sessionManagement()
             .sessionCreationPolicy(STATELESS)
@@ -36,5 +36,5 @@ class SecurityConfig(
     }
 
     @Bean
-    fun passwordEncorder(): PasswordEncoder = BCryptPasswordEncoder()
+    fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
 }

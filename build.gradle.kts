@@ -32,7 +32,6 @@ dependencies {
 	implementation(Dependency.OAUTH2)
 	implementation(Dependency.QUERYDSL)
 	implementation(Dependency.OPENFEIGN)
-	implementation(Dependency.CLOUD_AWS)
 	implementation(Dependency.EMAIL)
 	implementation (Dependency.OPENAPI)
 	implementation("org.springframework.security.oauth.boot", Dependency.OAUTH2_AUTOCONFIGURE, DependencyVersion.OAUTH2_AUTOCONFIGURE)

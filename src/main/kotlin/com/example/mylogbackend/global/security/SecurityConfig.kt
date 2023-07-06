@@ -29,7 +29,7 @@ class SecurityConfig(
 
             .and()
             .authorizeHttpRequests()
-            .antMatchers("/**").permitAll()
+            .antMatchers().permitAll()
 
             .and().apply(FilterConfig(objectMapper))
             .and().build()

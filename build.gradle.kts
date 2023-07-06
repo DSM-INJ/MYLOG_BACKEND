@@ -4,6 +4,7 @@ plugins {
 	id("org.springframework.boot") version PluginVersion.SPRING_BOOT_FRAMEWORK_VERSION
 	id("io.spring.dependency-management") version PluginVersion.SPRING_DEPENDENCY_MANAGEMENT_VERSION
 	id("org.jlleitschuh.gradle.ktlint-idea") version PluginVersion.KTLINT_VERSION
+	id("io.swagger.core.v3.swagger-gradle-plugin") version PluginVersion.SWAGGER_VERSION
 	kotlin("jvm") version PluginVersion.JVM_VERSION
 	kotlin("plugin.spring") version PluginVersion.PLUGIN_SPRING_VERSION
 	kotlin("plugin.jpa") version PluginVersion.PLUGIN_JPA_VERSION
@@ -33,7 +34,7 @@ dependencies {
 	implementation(Dependency.OPENFEIGN)
 	implementation(Dependency.CLOUD_AWS)
 	implementation(Dependency.EMAIL)
-	implementation(Dependency.SWAGGER)
+	implementation (Dependency.OPENAPI)
 	implementation("org.springframework.security.oauth.boot", Dependency.OAUTH2_AUTOCONFIGURE, DependencyVersion.OAUTH2_AUTOCONFIGURE)
 	implementation("org.springframework.security", Dependency.OAUTH2_CLIENT, DependencyVersion.OAUTH2_CLIENT)
 	annotationProcessor(Dependency.CONFIGURATION_PROCESSOR)

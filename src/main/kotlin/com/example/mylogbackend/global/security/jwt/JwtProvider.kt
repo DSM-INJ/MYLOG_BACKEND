@@ -7,7 +7,7 @@ import com.example.diaryservice.global.exception.SignatureTokenException
 import com.example.diaryservice.global.exception.UnexpectedTokenException
 import com.example.diaryservice.global.exception.ValidateTokenException
 import com.example.diaryservice.global.security.auth.AuthDetailsService
-import com.example.diaryservice.global.security.jwt.dto.TokenResponse
+import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.Jwts

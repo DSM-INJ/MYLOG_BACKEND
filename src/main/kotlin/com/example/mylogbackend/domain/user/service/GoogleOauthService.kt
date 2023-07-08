@@ -12,7 +12,7 @@ import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
 import com.example.oauth.infrastructure.feign.properties.GoogleFeignProperties
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
-import java.util.*
+import java.util.UUID
 
 @Service
 class GoogleOauthService(

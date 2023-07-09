@@ -1,6 +1,6 @@
-package com.example.oauth.infrastructure.feign.client
+package com.example.mylogbackend.infrastructure.feign.client
 
-import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
+import com.example.mylogbackend.infrastructure.feign.dto.response.TokenResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam

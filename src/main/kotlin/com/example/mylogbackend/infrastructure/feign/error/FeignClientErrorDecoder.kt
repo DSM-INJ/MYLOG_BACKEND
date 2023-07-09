@@ -1,9 +1,9 @@
 package com.example.mylogbackend.infrastructure.feign.error
 
-import com.example.oauth.infrastructure.feign.exception.FeignBadRequestException
-import com.example.oauth.infrastructure.feign.exception.FeignExpiredTokenException
-import com.example.oauth.infrastructure.feign.exception.FeignForbiddenException
-import com.example.oauth.infrastructure.feign.exception.FeignUnAuthorizedException
+import com.example.mylogbackend.infrastructure.feign.exception.FeignBadRequestException
+import com.example.mylogbackend.infrastructure.feign.exception.FeignExpiredTokenException
+import com.example.mylogbackend.infrastructure.feign.exception.FeignForbiddenException
+import com.example.mylogbackend.infrastructure.feign.exception.FeignUnAuthorizedException
 import feign.FeignException
 import feign.Response
 import feign.codec.ErrorDecoder

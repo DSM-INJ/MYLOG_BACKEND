@@ -1,5 +1,6 @@
-package com.example.diaryservice.global.security.jwt
+package com.example.mylogbackend.global.security.jwt
 
+import com.example.mylogbackend.global.security.jwt.JwtProperties
 import org.springframework.stereotype.Component
 import javax.servlet.http.HttpServletRequest
 

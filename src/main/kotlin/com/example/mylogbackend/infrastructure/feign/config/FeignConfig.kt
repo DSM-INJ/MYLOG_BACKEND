@@ -1,4 +1,4 @@
-package com.example.oauth.infrastructure.feign.config
+package com.example.mylogbackend.infrastructure.feign.config
 
 import com.example.mylogbackend.infrastructure.feign.error.FeignClientErrorDecoder
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean

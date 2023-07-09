@@ -1,4 +1,4 @@
-package com.example.oauth.infrastructure.feign.dto.response
+package com.example.mylogbackend.infrastructure.feign.dto.response
 
 data class UserInfoResponse(
     val googleResponse: GoogleUserInfoElement,

@@ -1,4 +1,4 @@
-package com.example.diaryservice.domain.user.domain.type
+package com.example.mylogbackend.domain.user.domain.type
 
 enum class Role(
     private val role: String

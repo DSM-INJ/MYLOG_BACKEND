@@ -1,6 +1,6 @@
-package com.example.diaryservice.global.security.auth
+package com.example.mylogbackend.global.security.auth
 
-import com.example.diaryservice.domain.user.domain.User
+import com.example.mylogbackend.domain.user.domain.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
@@ -9,9 +9,9 @@ class AuthDetails(
 ) : UserDetails {
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> = mutableListOf()
 
-    override fun getUsername(): String = user.name
+    override fun getPassword(): String = user.name
 
-    override fun getPassword(): String = user.password
+    override fun getUsername(): String = user.email
 
     override fun isAccountNonExpired(): Boolean = true
 

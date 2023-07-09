@@ -1,13 +1,13 @@
-package com.example.diaryservice.global.security.jwt
+package com.example.mylogbackend.global.security.jwt
 
-import com.example.diaryservice.domain.auth.domain.RefreshToken
-import com.example.diaryservice.domain.auth.domain.repository.RefreshTokenRepository
-import com.example.diaryservice.global.exception.ExpiredTokenException
-import com.example.diaryservice.global.exception.SignatureTokenException
-import com.example.diaryservice.global.exception.UnexpectedTokenException
-import com.example.diaryservice.global.exception.ValidateTokenException
-import com.example.diaryservice.global.security.auth.AuthDetailsService
-import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
+import com.example.mylogbackend.domain.auth.domain.RefreshToken
+import com.example.mylogbackend.domain.auth.domain.repository.RefreshTokenRepository
+import com.example.mylogbackend.global.exception.ExpiredTokenException
+import com.example.mylogbackend.global.exception.SignatureTokenException
+import com.example.mylogbackend.global.exception.UnexpectedTokenException
+import com.example.mylogbackend.global.exception.ValidateTokenException
+import com.example.mylogbackend.global.security.auth.AuthDetailsService
+import com.example.mylogbackend.infrastructure.feign.dto.response.TokenResponse
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.Jwts

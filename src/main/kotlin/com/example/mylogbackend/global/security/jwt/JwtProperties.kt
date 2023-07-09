@@ -1,4 +1,4 @@
-package com.example.diaryservice.global.security.jwt
+package com.example.mylogbackend.global.security.jwt
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding

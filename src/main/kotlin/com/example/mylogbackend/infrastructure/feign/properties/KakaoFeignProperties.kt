@@ -1,4 +1,4 @@
-package com.example.oauth.infrastructure.feign.properties
+package com.example.mylogbackend.infrastructure.feign.properties
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding

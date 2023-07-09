@@ -1,9 +1,9 @@
-package com.example.diaryservice.global.exception
+package com.example.mylogbackend.global.exception
 
-import com.example.diaryservice.global.error.exception.ErrorCode.UNEXPECTED_TOKEN
-import com.example.diaryservice.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.ErrorCode
 
-class UnexpectedTokenException : MyLogException(UNEXPECTED_TOKEN) {
+class UnexpectedTokenException : MyLogException(ErrorCode.UNEXPECTED_TOKEN) {
     companion object {
         @JvmField
         val EXCEPTION = UnexpectedTokenException()

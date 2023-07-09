@@ -1,4 +1,4 @@
-package com.example.diaryservice.domain.auth.domain
+package com.example.mylogbackend.domain.auth.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.redis.core.RedisHash

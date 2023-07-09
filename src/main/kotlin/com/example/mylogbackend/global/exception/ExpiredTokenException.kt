@@ -1,9 +1,9 @@
-package com.example.diaryservice.global.exception
+package com.example.mylogbackend.global.exception
 
-import com.example.diaryservice.global.error.exception.ErrorCode.EXPIRED_TOKEN
-import com.example.diaryservice.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.ErrorCode
+import com.example.mylogbackend.global.error.exception.MyLogException
 
-class ExpiredTokenException : MyLogException(EXPIRED_TOKEN) {
+class ExpiredTokenException : MyLogException(ErrorCode.EXPIRED_TOKEN) {
     companion object {
         @JvmField
         val EXCEPTION = ExpiredTokenException()

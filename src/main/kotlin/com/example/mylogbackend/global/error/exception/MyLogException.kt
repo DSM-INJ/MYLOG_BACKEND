@@ -1,4 +1,4 @@
-package com.example.diaryservice.global.error.exception
+package com.example.mylogbackend.global.error.exception
 
 open class MyLogException(
     private val errorCode: ErrorCode

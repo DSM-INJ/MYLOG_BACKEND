@@ -1,15 +1,15 @@
-package com.example.oauth.domain.auth.service
+package com.example.mylogbackend.domain.auth.service
 
-import com.example.diaryservice.domain.user.domain.User
-import com.example.diaryservice.domain.user.domain.repository.UserRepository
-import com.example.diaryservice.domain.user.domain.type.ProviderType.FACEBOOK
-import com.example.diaryservice.domain.user.domain.type.Role.USER
-import com.example.diaryservice.global.security.jwt.JwtProvider
-import com.example.oauth.infrastructure.feign.client.FacebookTokenClient
-import com.example.oauth.infrastructure.feign.client.FacebookUserInfoClient
-import com.example.oauth.infrastructure.feign.dto.response.FacebookUserInfoElement
-import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
-import com.example.oauth.infrastructure.feign.properties.FacebookFeignProperties
+import com.example.mylogbackend.domain.user.domain.User
+import com.example.mylogbackend.domain.user.domain.repository.UserRepository
+import com.example.mylogbackend.domain.user.domain.type.ProviderType.FACEBOOK
+import com.example.mylogbackend.domain.user.domain.type.Role.USER
+import com.example.mylogbackend.global.security.jwt.JwtProvider
+import com.example.mylogbackend.infrastructure.feign.client.FacebookTokenClient
+import com.example.mylogbackend.infrastructure.feign.client.FacebookUserInfoClient
+import com.example.mylogbackend.infrastructure.feign.dto.response.FacebookUserInfoElement
+import com.example.mylogbackend.infrastructure.feign.dto.response.TokenResponse
+import com.example.mylogbackend.infrastructure.feign.properties.FacebookFeignProperties
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import java.util.UUID
@@ -36,7 +36,7 @@ class FacebookOauthService(
 
         val userInfo: FacebookUserInfoElement = facebookUserInfoClient.getUserInfo(facebookToken).facebookResponse
 
-        var user: User = userRepository.findByEmail(userInfo.email)
+        var user: User? = userRepository.findByEmail(userInfo.email)
 
         if (user == null) {
             user = User(

@@ -1,17 +1,22 @@
-package com.example.diaryservice.global.error.exception
+package com.example.mylogbackend.global.error.exception
+
+import com.example.mylogbackend.global.error.ErrorProperty
 
 enum class ErrorCode(
-    val status: Int,
-    val message: String
-) {
+    override val status: Int,
+    override val message: String
+) : ErrorProperty {
     FEIGN_BAD_REQUEST(400, "Feign Bad Request"),
+
     EXPIRED_TOKEN(401, "Expired Token"),
-    SIGNATURE_TOKEN(401, "Invalid Signature"),
-    VALIDATE_FAIL_TOkEN(401, "Validate Failed Token"),
+    JWT_SIGNATURE(401, "Invalid Signature"),
+    VALIDATE_FAIL_TOKEN(401, "Token Validate Failed"),
+    PASSWORD_MISMATCH(401, "Password Mismatch"),
     FEIGN_UNAUTHORIZED(401, "Feign Unauthorized"),
 
     USER_NOT_FOUND(404, "User Not Found"),
     REFRESH_TOKEN_NOT_FOUND(404, "Refresh Token Not Found"),
+    FEED_NOT_FOUND(404, "Feed Not Found"),
 
     FEIGN_FORBIDDEN(403, "Feign Forbidden"),
 

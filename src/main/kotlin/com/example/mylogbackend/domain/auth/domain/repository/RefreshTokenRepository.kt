@@ -1,6 +1,10 @@
-package com.example.diaryservice.domain.auth.domain.repository
+package com.example.mylogbackend.domain.auth.domain.repository
 
-import com.example.diaryservice.domain.auth.domain.RefreshToken
+import com.example.mylogbackend.domain.auth.domain.RefreshToken
 import org.springframework.data.repository.CrudRepository
+import org.springframework.stereotype.Repository
 
-interface RefreshTokenRepository : CrudRepository<RefreshToken, String> {}
+@Repository
+interface RefreshTokenRepository : CrudRepository<RefreshToken, String> {
+    fun findByToken(token: String): RefreshToken?
+}

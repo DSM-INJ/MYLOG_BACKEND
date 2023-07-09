@@ -1,13 +1,12 @@
-package com.example.diaryservice.domain.user.domain.repository
+package com.example.mylogbackend.domain.user.domain.repository
 
-import com.example.diaryservice.domain.user.domain.User
-import org.springframework.data.jpa.repository.JpaRepository
+import com.example.mylogbackend.domain.user.domain.User
+import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
-import java.util.UUID
+import java.util.*
 
 @Repository
-interface UserRepository : JpaRepository<User, UUID> {
+interface UserRepository : CrudRepository<User, UUID> {
     fun existsByEmail(email: String): Boolean
-    fun findByEmail(email: String): User
-    fun findByName(name: String): User
+    fun findByEmail(email: String): User?
 }

@@ -1,15 +1,15 @@
-package com.example.oauth.domain.auth.service
+package com.example.mylogbackend.domain.auth.service
 
-import com.example.diaryservice.domain.user.domain.User
-import com.example.diaryservice.domain.user.domain.repository.UserRepository
-import com.example.diaryservice.domain.user.domain.type.ProviderType.KAKAO
-import com.example.diaryservice.domain.user.domain.type.Role.USER
-import com.example.diaryservice.global.security.jwt.JwtProvider
-import com.example.oauth.infrastructure.feign.client.KakaoTokenClient
-import com.example.oauth.infrastructure.feign.client.KakaoUserInfoClient
-import com.example.oauth.infrastructure.feign.dto.response.KakaoUserInfoElement
-import com.example.oauth.infrastructure.feign.dto.response.TokenResponse
-import com.example.oauth.infrastructure.feign.properties.KakaoFeignProperties
+import com.example.mylogbackend.domain.user.domain.User
+import com.example.mylogbackend.domain.user.domain.repository.UserRepository
+import com.example.mylogbackend.domain.user.domain.type.ProviderType.KAKAO
+import com.example.mylogbackend.domain.user.domain.type.Role.USER
+import com.example.mylogbackend.global.security.jwt.JwtProvider
+import com.example.mylogbackend.infrastructure.feign.client.KakaoTokenClient
+import com.example.mylogbackend.infrastructure.feign.client.KakaoUserInfoClient
+import com.example.mylogbackend.infrastructure.feign.dto.response.KakaoUserInfoElement
+import com.example.mylogbackend.infrastructure.feign.dto.response.TokenResponse
+import com.example.mylogbackend.infrastructure.feign.properties.KakaoFeignProperties
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import java.util.UUID

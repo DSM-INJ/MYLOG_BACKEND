@@ -1,10 +1,9 @@
-package com.example.oauth.infrastructure.feign.exception
+package com.example.mylogbackend.infrastructure.feign.exception
 
-import com.example.diaryservice.global.error.exception.ErrorCode.FEIGN_EXPIRED_TOKEN
-import com.example.diaryservice.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.ErrorCode
+import com.example.mylogbackend.global.error.exception.MyLogException
 
-
-class FeignExpiredTokenException : MyLogException(FEIGN_EXPIRED_TOKEN) {
+class FeignExpiredTokenException : MyLogException(ErrorCode.FEIGN_EXPIRED_TOKEN) {
     companion object {
         @JvmField
         val EXCEPTION = FeignExpiredTokenException()

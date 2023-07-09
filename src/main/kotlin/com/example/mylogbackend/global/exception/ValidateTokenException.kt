@@ -1,9 +1,9 @@
-package com.example.diaryservice.global.exception
+package com.example.mylogbackend.global.exception
 
-import com.example.diaryservice.global.error.exception.ErrorCode.VALIDATE_FAIL_TOkEN
-import com.example.diaryservice.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.ErrorCode.VALIDATE_FAIL_TOKEN
+import com.example.mylogbackend.global.error.exception.MyLogException
 
-class ValidateTokenException : MyLogException(VALIDATE_FAIL_TOkEN) {
+class ValidateTokenException : MyLogException(VALIDATE_FAIL_TOKEN) {
     companion object {
         @JvmField
         val EXCEPTION = ValidateTokenException()

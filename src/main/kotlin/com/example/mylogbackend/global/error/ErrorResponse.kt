@@ -1,6 +1,6 @@
-package com.example.diaryservice.global.error
+package com.example.mylogbackend.global.error
 
-import com.example.diaryservice.global.error.exception.MyLogException
+import com.example.mylogbackend.global.error.exception.MyLogException
 
 class ErrorResponse<T>(
     val status: Int,

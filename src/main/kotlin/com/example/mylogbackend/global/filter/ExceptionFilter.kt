@@ -1,8 +1,8 @@
-package com.example.diaryservice.global.filter
+package com.example.mylogbackend.global.filter
 
-import com.example.diaryservice.global.error.ErrorResponse
-import com.example.diaryservice.global.error.exception.MyLogException
-import com.example.diaryservice.global.exception.InternalServerError
+import com.example.mylogbackend.global.error.ErrorResponse
+import com.example.mylogbackend.global.error.exception.MyLogException
+import com.example.mylogbackend.global.exception.InternalServerError
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.http.MediaType
 import org.springframework.web.filter.OncePerRequestFilter
@@ -20,17 +20,17 @@ class ExceptionFilter(
     ) {
         try {
             filterChain.doFilter(request, response)
-        } catch (e:Exception) {
-            e.printStackTrace()
-            when (e) {
-                is MyLogException -> writeErrorCode(e, response)
+        } catch (exception: Exception) {
+            exception.printStackTrace()
+            when (exception) {
+                is MyLogException -> writeErrorCode(exception, response)
                 else -> writeErrorCode(InternalServerError, response)
             }
         }
     }
 
-    private fun writeErrorCode(e:MyLogException, response: HttpServletResponse) {
-        val errorResponse = ErrorResponse.of(e)
+    private fun writeErrorCode(exception: MyLogException, response: HttpServletResponse) {
+        val errorResponse = ErrorResponse.of(exception)
 
         response.contentType = MediaType.APPLICATION_JSON_VALUE
         response.status = errorResponse.status

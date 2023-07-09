@@ -1,8 +1,8 @@
-package com.example.diaryservice.domain.user.domain
+package com.example.mylogbackend.domain.user.domain
 
-import com.example.diaryservice.domain.user.domain.type.ProviderType
-import com.example.diaryservice.domain.user.domain.type.Role
-import com.example.diaryservice.global.entity.BaseUUIDEntity
+import com.example.mylogbackend.domain.user.domain.type.ProviderType
+import com.example.mylogbackend.domain.user.domain.type.Role
+import com.example.mylogbackend.global.entity.BaseUUIDEntity
 import org.hibernate.annotations.DynamicInsert
 import org.hibernate.validator.constraints.Length
 import java.time.LocalDateTime

@@ -1,19 +1,43 @@
 package com.example.mylogbackend.infrastructure.feign.config
 
-import io.swagger.v3.oas.models.OpenAPI
-import io.swagger.v3.oas.models.info.Info
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
+import org.springframework.stereotype.Component
+import org.springframework.web.servlet.config.annotation.EnableWebMvc
+import springfox.documentation.builders.ApiInfoBuilder
+import springfox.documentation.builders.PathSelectors
+import springfox.documentation.builders.RequestHandlerSelectors
+import springfox.documentation.spi.DocumentationType
+import springfox.documentation.spring.web.plugins.Docket
 
-@Configuration
+@EnableWebMvc
+@Component
 class SwaggerConfig {
     @Bean
-    fun openApi(): OpenAPI {
-        return OpenAPI()
-            .info(
-                Info().title("MyLog API")
-                    .description("대프콘만을 위한 MyLog API 명세서입니다;..")
-                    .version("v1")
-            )
+    fun swaggerApi(): Docket = Docket(DocumentationType.OAS_30)
+        .consumes(getConsumeContentTypes())
+        .produces(getProduceContentTypes())
+        .apiInfo(swaggerInfo())
+        .select()
+        .apis(RequestHandlerSelectors.basePackage("com.example.oauth"))
+        .paths(PathSelectors.any())
+        .build()
+        .useDefaultResponseMessages(false)
+
+    private fun swaggerInfo() = ApiInfoBuilder()
+        .title("INJ PROJECT")
+        .description("MyLog API 명세서")
+        .version("1.0.0")
+        .build()
+
+    private fun getConsumeContentTypes(): Set<String> {
+        val consumes = HashSet<String>()
+        consumes.add("multipart/form-data")
+        return consumes
+    }
+
+    private fun getProduceContentTypes(): Set<String> {
+        val produces = HashSet<String>()
+        produces.add("application/json;charset=UTF-8")
+        return produces
     }
 }

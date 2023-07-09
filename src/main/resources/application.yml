@@ -53,7 +53,7 @@ jwt:
 cloud:
   aws:
     region:
-      static: ${AWS_S3_REGION:ap-northeast-2}
+      static: ${AWS_S3_REGION}
     stack:
       auto: false
     credentials:

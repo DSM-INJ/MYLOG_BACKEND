@@ -18,5 +18,6 @@ object Dependency {
     const val OPENFEIGN = "org.springframework.cloud:spring-cloud-starter-openfeign:${DependencyVersion.OPENFEIGN}"
     const val CLOUD_AWS ="org.springframework.cloud:spring-cloud-starter-aws:${DependencyVersion.AWS}.RELEASE"
     const val EMAIL = "org.springframework.boot:spring-boot-starter-mail"
-    const val OPENAPI = "org.springdoc:springdoc-openapi-ui:1.6.9"
+    const val SWAGGER = "io.springfox:springfox-swagger-ui:${DependencyVersion.SWAGGER}"
+    const val SWAGEER_STARTER = "io.springfox:springfox-boot-starter:3.0.0"
 }

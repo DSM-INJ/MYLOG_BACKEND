@@ -5,4 +5,5 @@ object DependencyVersion {
     const val QUERYDSL = "5.0.0"
     const val OPENFEIGN = "3.1.4"
     const val AWS ="2.2.6"
+    const val SWAGGER = "3.0.0"
 }

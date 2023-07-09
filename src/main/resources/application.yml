@@ -49,3 +49,13 @@ jwt:
   refresh_exp: ${JWT_REFRESH_EXP}
   header: ${JWT_HEADER}
   prefix: ${JWT_PREFIX}
+
+cloud:
+  aws:
+    region:
+      static: ${AWS_S3_REGION:ap-northeast-2}
+    stack:
+      auto: false
+    credentials:
+      access-key: ${AWS_S3_ACCESS}
+      secret-key: ${AWS_S3_SECRET}

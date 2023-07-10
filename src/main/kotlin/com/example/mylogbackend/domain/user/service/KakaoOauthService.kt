@@ -1,4 +1,4 @@
-package com.example.mylogbackend.domain.auth.service
+package com.example.mylogbackend.domain.user.service
 
 import com.example.mylogbackend.domain.user.domain.User
 import com.example.mylogbackend.domain.user.domain.repository.UserRepository

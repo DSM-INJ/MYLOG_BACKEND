@@ -1,9 +1,9 @@
 package com.example.mylogbackend.domain.user.presentation
 
-import com.example.mylogbackend.domain.auth.service.FacebookOauthService
+import com.example.mylogbackend.domain.user.service.FacebookOauthService
 import com.example.mylogbackend.infrastructure.feign.dto.response.TokenResponse
-import com.example.mylogbackend.domain.auth.service.GoogleOauthService
-import com.example.mylogbackend.domain.auth.service.KakaoOauthService
+import com.example.mylogbackend.domain.user.service.GoogleOauthService
+import com.example.mylogbackend.domain.user.service.KakaoOauthService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
